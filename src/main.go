@@ -8,10 +8,14 @@ import (
 	"syscall"
 
 	"github.com/bwmarrin/discordgo"
+	"github.com/joho/godotenv"
 )
 
+
+var err = godotenv.Load(".env")
+
 var (
-	Token string = "MTA2MDE4MzkwMzk5NTk2NTQ1MQ.GAkDC3.hZds0Q-23smpaYGTwqqHyhkjKa4DPvfX3knQi8"
+	Token string = os.Getenv("DS_BOT_TOKEN")
 )
 
 
